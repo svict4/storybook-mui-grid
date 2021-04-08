@@ -1,0 +1,169 @@
+{
+  "name": "@acrrm/my",
+  "author": "ACRRM",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "yarn format",
+      "yarn lint:fix-dry-run"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": ".",
+    "outputName": "junit.xml"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@material-ui/core)/"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/serviceWorker.js",
+      "!**/index.js"
+    ]
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.13.6",
+    "@emotion/cache": "^11.1.3",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "@fullcalendar/core": "^5.5.0",
+    "@fullcalendar/daygrid": "^5.5.0",
+    "@fullcalendar/interaction": "^5.5.0",
+    "@fullcalendar/list": "^5.5.0",
+    "@fullcalendar/react": "^5.5.0",
+    "@fullcalendar/timegrid": "^5.5.0",
+    "@fullcalendar/timeline": "^5.5.0",
+    "@material-ui/core": "^5.0.0-alpha.27",
+    "@material-ui/icons": "^5.0.0-alpha.27",
+    "@material-ui/lab": "^5.0.0-alpha.27",
+    "@material-ui/pickers": "^3.3.10",
+    "@material-ui/system": "^5.0.0-alpha.27",
+    "@react-pdf/renderer": "^1.6.13",
+    "@reduxjs/toolkit": "^1.5.0",
+    "@sentry/react": "^6.2.3",
+    "@sentry/tracing": "^6.2.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.0.1",
+    "@types/jest": "^26.0.20",
+    "@types/lodash": "^4.14.167",
+    "@types/moment-timezone": "^0.5.30",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^17.0.0",
+    "@types/react-beautiful-dnd": "^13.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-draft-wysiwyg": "^1.13.1",
+    "@types/react-redux": "^7.1.15",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/yup": "^0.29.11",
+    "apexcharts": "^3.23.1",
+    "aws-amplify": "^3.0.20",
+    "axios": "^0.21.1",
+    "axios-mock-adapter": "^1.19.0",
+    "blurhash": "^1.1.3",
+    "date-fns": "^2.16.1",
+    "draft-js": "^0.11.7",
+    "firebase": "^8.2.3",
+    "formik": "^2.2.6",
+    "gray-matter": "^4.0.2",
+    "history": "^5.0.0",
+    "husky": "^5.2.0",
+    "lint-staged": "^10.5.4",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "notistack": "^1.0.3",
+    "nprogress": "^0.2.0",
+    "numeral": "^2.0.6",
+    "prettier": "^2.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-apexcharts": "^1.3.7",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^17.0.2",
+    "react-draft-wysiwyg": "^1.14.5",
+    "react-dropzone": "^11.2.4",
+    "react-helmet-async": "^1.0.7",
+    "react-hook-form": "^6.15.5",
+    "react-markdown": "^5.0.3",
+    "react-modal-image": "^2.5.0",
+    "react-number-format": "^4.5.1",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-player": "^2.9.0",
+    "react-quill": "^1.3.5",
+    "react-redux": "^7.2.3",
+    "react-router": "^6.0.0-beta.0",
+    "react-router-dom": "^6.0.0-beta.0",
+    "react-scripts": "^4.0.3",
+    "react-syntax-highlighter": "^15.4.3",
+    "react-transition-group": "^4.4.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "stylis": "^4.0.6",
+    "stylis-plugin-rtl": "^2.0.1",
+    "typescript": "^4.2.3",
+    "web-vitals": "^1.1.0",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "@mdx-js/react": "^1.6.22",
+    "@react-theming/storybook-addon": "^1.1.1",
+    "@storybook/addon-a11y": "^6.2.3",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-console": "^1.2.3",
+    "@storybook/addon-design-assets": "^6.2.3",
+    "@storybook/addon-docs": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-jest": "^6.2.3",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/node-logger": "^6.1.21",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.1.21",
+    "@types/jsdom": "^16.2.10",
+    "chromatic": "^5.7.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest-junit": "^12.0.0",
+    "react-test-renderer": "^17.0.2",
+    "storybook-addon-material-ui": "^0.9.0-alpha.24",
+    "storybook-addon-playroom": "^2.0.0",
+    "ts-jest": "^26.5.4"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0",
+    "webpack": "4.44.2"
+  }
+}
