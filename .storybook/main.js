@@ -1,3 +1,6 @@
+const path = require("path");
+const toPath = (filePath) => path.join(process.cwd(), filePath);
+
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -5,8 +8,8 @@ module.exports = {
     {
       name: "@storybook/addon-docs",
       options: {
-        configureJSX: true
-      }
+        configureJSX: true,
+      },
     },
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -15,6 +18,6 @@ module.exports = {
     "@storybook/addon-design-assets",
     "@storybook/addon-jest",
     "storybook-addon-playroom",
-    "@storybook/addon-actions/register"
-  ]
+    "@storybook/addon-actions/register",
+  ],
 };
